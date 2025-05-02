@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Starting – Arrow Simulator MT5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding-top: 100px;
+      color: #333;
+    }
+    .message { font-size: 20px; }
+  </style>
+  <script>
+    window.onload = function () {
+      const fileUrl = "https://drive.google.com/uc?export=download&id=1tb3z_oxGa_flwrluFgNLIiPMlFhHGsXk";
+      // Force download via location change
+      window.location.href = fileUrl;
+      // Fallback: open in new tab if needed
+      setTimeout(() => window.open(fileUrl, "_blank"), 500);
+      // Redirect back to your site after 6s
+      setTimeout(() => {
+        window.location.href = "https://www.freeindicatorshub.com";
+      }, 6000);
+    };
+  </script>
+</head>
+<body>
+  <div class="message">
+    <h2>Your download is starting...</h2>
+    <p>If it doesn’t start automatically, <a href="https://drive.google.com/uc?export=download&id=1tb3z_oxGa_flwrluFgNLIiPMlFhHGsXk" target="_blank">click here</a>.</p>
+  </div>
+</body>
+</html>
