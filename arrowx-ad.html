@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advertisement - Please Wait</title>
+  <title>Advertisement – Please Wait</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
+      margin: 0;
+      padding: 40px 20px;
       text-align: center;
-      padding-top: 50px;
     }
     .container {
       background: white;
@@ -19,9 +20,14 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    p {
+    .message {
       font-size: 16px;
       color: #444;
+      margin-bottom: 12px;
+    }
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
       margin-bottom: 20px;
     }
     iframe {
@@ -31,15 +37,43 @@
     }
   </style>
   <script>
-    setTimeout(function () {
-      window.location.href = "https://ptr777.github.io/freeindicatorshub-ads/arrowx-final.html";
-    }, 45000); // Wait 45 seconds before redirect
+    // Total seconds to wait
+    var secondsLeft = 45;
+
+    // Update countdown every second
+    function updateTimer() {
+      var el = document.getElementById('timer');
+      el.textContent = secondsLeft;
+      if (secondsLeft <= 0) {
+        clearInterval(intervalId);
+      }
+      secondsLeft--;
+    }
+
+    // Redirect when countdown ends
+    function scheduleRedirect() {
+      setTimeout(function() {
+        window.location.href = "https://ptr777.github.io/freeindicatorshub-ads/arrowx-final.html";
+      }, 45000);
+    }
+
+    window.onload = function() {
+      // Initialize display
+      updateTimer();
+      // Start countdown interval
+      intervalId = setInterval(updateTimer, 1000);
+      // Schedule the redirect
+      scheduleRedirect();
+    };
   </script>
 </head>
 <body>
   <div class="container">
-    <p>Your download will start shortly. Please wait while the ad is shown.</p>
-    <iframe src="https://www.profitableratecpm.com/wzu8wkimfj?key=8634341cd85be780abd79a368a60c18f"></iframe>
+    <div class="message">Your download will start automatically in:</div>
+    <div class="countdown"><span id="timer">45</span> seconds</div>
+
+    <!-- Adsterra Direct Link iframe -->
+    <iframe src="https://www.profitableratecpm.com/wzu8wkimfj?key=8634341cd85be780abd79a368a60c18f" allowfullscreen></iframe>
   </div>
 </body>
 </html>
