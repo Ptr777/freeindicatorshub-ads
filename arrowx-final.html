@@ -18,22 +18,32 @@
   </style>
   <script>
     window.onload = function () {
-      // Start file download
-      window.location.href = "https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7";
+      const fileUrl = "https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7";
+      
+      // 1) Try to force a download via an <a> tag
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = "";                // Suggest download, some browsers honor it
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
 
-      // After 4 seconds, redirect back to your site
-      setTimeout(function () {
+      // 2) Fallback: open in new tab if download attr isn’t supported
+      setTimeout(() => {
+        window.open(fileUrl, "_blank");
+      }, 500);
+
+      // 3) Redirect back to your site after a few seconds
+      setTimeout(() => {
         window.location.href = "https://www.freeindicatorshub.com";
-      }, 4000); // You can change 4000 to 6000 or 10000 for longer delay
+      }, 6000);
     };
   </script>
 </head>
 <body>
   <div class="message">
     <h2>Your download is starting...</h2>
-    <p>If it doesn't start automatically, 
-      <a href="https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7">click here</a>.
-    </p>
+    <p>If it doesn't start automatically, <a href="https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7" target="_blank">click here</a>.</p>
   </div>
 </body>
 </html>
