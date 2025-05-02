@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starting Download...</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      margin: auto;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+  <script>
+    // Trigger file download
+    window.onload = function () {
+      const link = document.createElement('a');
+      link.href = "https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW";
+      link.download = "Wavelet-Bands.ex4";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Redirect back to Google Site after delay
+      setTimeout(function () {
+        window.location.href = "https://www.freeindicatorshub.com";
+      }, 8000); // Wait 8 seconds before redirecting
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Your download is starting...</h1>
+    <p>If it doesn't, <a href="https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW">click here</a>.</p>
+    <p>You’ll be redirected back shortly.</p>
+  </div>
+</body>
+</html>
