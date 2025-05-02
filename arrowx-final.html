@@ -2,43 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download Starting - Arrow X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Downloading Arrow X Indicator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f9f9f9;
       text-align: center;
       padding-top: 100px;
+      color: #333;
     }
-    .container {
-      background: white;
-      padding: 30px;
-      margin: auto;
-      max-width: 500px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    p {
-      font-size: 16px;
-      color: #555;
+    .message {
+      font-size: 20px;
     }
   </style>
   <script>
-    // Start file download
     window.onload = function () {
+      // Start file download
       window.location.href = "https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7";
-      // Redirect back to the original page after 3 seconds
+
+      // After 4 seconds, redirect back to your site
       setTimeout(function () {
         window.location.href = "https://www.freeindicatorshub.com";
-      }, 3000);
+      }, 4000); // You can change 4000 to 6000 or more for a longer delay
     };
   </script>
 </head>
 <body>
-  <div class="container">
-    <p>Your download is starting...</p>
-    <p>You will be redirected shortly.</p>
+  <div class="message">
+    <h2>Your download is starting...</h2>
+    <p>If it doesn't start automatically, <a href="https://drive.google.com/uc?export=download&id=1R0Ed8e13BZrYpP1TZcjlTNH4QIi2m0o7">click here</a>.</p>
   </div>
 </body>
 </html>
+
+
