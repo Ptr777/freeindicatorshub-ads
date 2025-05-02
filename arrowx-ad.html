@@ -37,33 +37,20 @@
     }
   </style>
   <script>
-    // Total seconds to wait
-    var secondsLeft = 45;
+    let secondsLeft = 45, intervalId;
 
-    // Update countdown every second
     function updateTimer() {
-      var el = document.getElementById('timer');
+      const el = document.getElementById('timer');
       el.textContent = secondsLeft;
-      if (secondsLeft <= 0) {
-        clearInterval(intervalId);
-      }
-      secondsLeft--;
-    }
-
-    // Redirect when countdown ends
-    function scheduleRedirect() {
-      setTimeout(function() {
-        window.location.href = "https://ptr777.github.io/freeindicatorshub-ads/arrowx-final.html";
-      }, 45000);
+      if (secondsLeft-- <= 0) clearInterval(intervalId);
     }
 
     window.onload = function() {
-      // Initialize display
       updateTimer();
-      // Start countdown interval
       intervalId = setInterval(updateTimer, 1000);
-      // Schedule the redirect
-      scheduleRedirect();
+      setTimeout(() => {
+        window.location.href = "https://ptr777.github.io/freeindicatorshub-ads/arrowx-final.html";
+      }, 45000);
     };
   </script>
 </head>
@@ -71,9 +58,7 @@
   <div class="container">
     <div class="message">Your download will start automatically in:</div>
     <div class="countdown"><span id="timer">45</span> seconds</div>
-
-    <!-- Adsterra Direct Link iframe -->
-    <iframe src="https://www.profitableratecpm.com/wzu8wkimfj?key=8634341cd85be780abd79a368a60c18f" allowfullscreen></iframe>
+    <iframe src="https://www.profitableratecpm.com/wzu8wkimfj?key=8634341cd85be780abd79a368a60c18f?v=2" allowfullscreen></iframe>
   </div>
 </body>
 </html>
