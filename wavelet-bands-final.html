@@ -29,26 +29,25 @@
     }
   </style>
   <script>
-    // Trigger file download
     window.onload = function () {
       const link = document.createElement('a');
-      link.href = "https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW";
-      link.download = "Wavelet-Bands.ex4";
+      link.href = "https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW";  <!-- Corrected download link -->
+      link.download = "Wavelet-Bands.ex4";  // You can change the filename here
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
 
-      // Redirect back to Google Site after delay
+      // Redirect after download starts
       setTimeout(function () {
-        window.location.href = "https://www.freeindicatorshub.com";
-      }, 8000); // Wait 8 seconds before redirecting
+        window.location.href = "https://www.freeindicatorshub.com";  // Redirect to your main page
+      }, 8000);  // Wait 8 seconds before redirecting
     }
   </script>
 </head>
 <body>
   <div class="container">
     <h1>Your download is starting...</h1>
-    <p>If it doesn't, <a href="https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW">click here</a>.</p>
+    <p>If it doesn't start automatically, <a href="https://drive.google.com/uc?export=download&id=1jeAtUFswY8hlm73vB8XuwGhbtF93vVIW">click here</a>.</p>
     <p>You’ll be redirected back shortly.</p>
   </div>
 </body>
