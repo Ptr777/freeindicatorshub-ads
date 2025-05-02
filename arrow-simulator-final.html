@@ -17,11 +17,11 @@
   <script>
     window.onload = function () {
       const fileUrl = "https://drive.google.com/uc?export=download&id=1tb3z_oxGa_flwrluFgNLIiPMlFhHGsXk";
-      // Force download via location change
+      // Start download
       window.location.href = fileUrl;
-      // Fallback: open in new tab if needed
+      // Fallback open
       setTimeout(() => window.open(fileUrl, "_blank"), 500);
-      // Redirect back to your site after 6s
+      // Redirect back after 6 sec
       setTimeout(() => {
         window.location.href = "https://www.freeindicatorshub.com";
       }, 6000);
