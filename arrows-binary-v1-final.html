@@ -16,13 +16,16 @@
   </style>
   <script>
     window.onload = function () {
-      const fileUrl = "https://drive.google.com/uc?export=download&id=1afs1n_WMWsIcM0DINZ9SQqfah61HR4ZO";
-      // Start download
-      window.location.href = fileUrl;
-      // Fallback open
-      setTimeout(() => window.open(fileUrl, "_blank"), 500);
-      // Redirect back after 6s
-      setTimeout(() => {
+      // Trigger file download
+      window.location.href = "https://drive.google.com/uc?export=download&id=1afs1n_WMWsIcM0DINZ9SQqfah61HR4ZO";
+
+      // After 5s, attempt to close this tab
+      setTimeout(function() {
+        window.close();
+      }, 5000);
+
+      // Fallback: after 6s, redirect back
+      setTimeout(function() {
         window.location.href = "https://www.freeindicatorshub.com";
       }, 6000);
     };
