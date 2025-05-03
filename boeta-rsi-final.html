@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Starting - Boeta RSI</title>
+  <script>
+    window.onload = function () {
+      const downloadUrl = "https://drive.google.com/uc?export=download&id=1UCXc5ZRpP1JCesSzIS0MkiNo2DaeOr-K";
+      const a = document.createElement("a");
+      a.href = downloadUrl;
+      a.download = "";
+      document.body.appendChild(a);
+      a.click();
+
+      // Close the tab after 5 seconds
+      setTimeout(() => {
+        window.close();
+      }, 5000);
+    };
+  </script>
+</head>
+<body>
+  <h2 style="text-align:center; margin-top:100px;">Your download should begin shortly...</h2>
+</body>
+</html>
