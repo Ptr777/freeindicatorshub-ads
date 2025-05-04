@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download Starting - AI SignalFusion</title>
+  <script>
+    window.onload = function () {
+      const downloadUrl = "https://drive.google.com/uc?export=download&id=1v_XK6Jn33_tRec0qdm8wDKdVCWyaT8W3";
+      const a = document.createElement("a");
+      a.href = downloadUrl;
+      a.download = "";
+      document.body.appendChild(a);
+      a.click();
+
+      setTimeout(() => {
+        window.close();
+      }, 5000);
+    };
+  </script>
+</head>
+<body>
+  <h2 style="text-align:center; margin-top:100px;">Your download should begin shortly...</h2>
+</body>
+</html>
