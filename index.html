@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Banner Embed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent; /* Keeps it clean when iframed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        #container-5d584048469dc41ba040501b85485ab2 {
+            width: 100%;
+            max-width: 728px; /* Adjust if your banner is leaderboard size; check Adsterra for exact dimensions */
+            height: 90px;     /* Native banners are often 728×90, 300×250, etc. — tweak as needed */
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            #container-5d584048469dc41ba040501b85485ab2 {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Your exact Adsterra Native Banner Code -->
+    <script async="async" data-cfasync="false" src="https://pl26540839.effectivegatecpm.com/5d584048469dc41ba040501b85485ab2/invoke.js"></script>
+    <div id="container-5d584048469dc41ba040501b85485ab2"></div>
+</body>
+</html>
