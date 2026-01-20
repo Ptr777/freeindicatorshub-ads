@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Banner Embed</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: transparent; /* Keeps it clean when iframed */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        #container-5d584048469dc41ba040501b85485ab2 {
-            width: 100%;
-            max-width: 728px; /* Adjust if your banner is leaderboard size; check Adsterra for exact dimensions */
-            height: 90px;     /* Native banners are often 728×90, 300×250, etc. — tweak as needed */
-            text-align: center;
-        }
-        @media (max-width: 768px) {
-            #container-5d584048469dc41ba040501b85485ab2 {
-                max-width: 100%;
-                height: auto;
-            }
-        }
-    </style>
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100% !important;
+        overflow: hidden !important; /* Prevents scrollbars if ad overflows slightly */
+    }
+    #container-5d584048469dc41ba040501b85485ab2,
+    #container-5d584048469dc41ba040501b85485ab2 * {  /* Targets the container + any injected children */
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin: 0 auto !important; /* Centers horizontally if needed */
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align to top instead of center */
+        background: transparent;
+    }
+</style>
 </head>
 <body>
     <!-- Your exact Adsterra Native Banner Code -->
