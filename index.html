@@ -3,16 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trader Widget</title>
+    <title>Trader Info Widget</title>
     <style>
-        body { margin: 0; padding: 0; background: transparent; }
-        iframe { border: none; width: 100%; height: 100vh; }
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;          /* or #fff / white if you prefer a background */
+            overflow: hidden;
+        }
+        .widget-container {
+            width: 100%;
+            height: 100vh;                    /* full viewport height – adjust if needed */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 20px;                /* extra space at top if desired */
+        }
     </style>
 </head>
 <body>
-    <iframe src="https://widgets.../trader-info/430897?&lang=en&utm_source=430897&utm_medium=refferal&utm_campaign=horizontaltraderwidget" 
-            width="500" height="440" scrolling="no" 
-            style="border: 0px solid rgb(216, 221, 230); border-radius: 3px; padding-top: 25px;">
-    </iframe>
+    <div class="widget-container">
+        <iframe 
+            id="small-banner"
+            src="/widgets/trader-info/430897?&lang=en&utm_source=430897&utm_medium=refferal&utm_campaign=horizontaltraderwidget"
+            width="500" 
+            height="440" 
+            scrolling="no"
+            style="border: 0px solid rgb(216, 221, 230); border-radius: 3px; padding-top: 25px;"
+            allowfullscreen
+        ></iframe>
+    </div>
 </body>
 </html>
